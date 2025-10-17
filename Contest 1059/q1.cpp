@@ -59,17 +59,20 @@ template <typename T>
 void printv(const vector<T>& v) { for (auto &x : v) cout << x << " "; cout << "\n"; }
 
 void solve() {
-    // Your per-testcase logic here
-    int n, m;
-    cin >> n >> m;
-    cout << n + m << "\n";
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<*max_element(arr.begin(), arr.end())<<"\n";
 }
 
 int32_t main() {
     fast_io();
 
     int T = 1;
-    // cin >> T; // Uncomment if multiple testcases
+    cin >> T; // Uncomment if multiple testcases
 
     while (T--) solve();
     return 0;
